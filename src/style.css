@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+    --bg-color: #171622;
+    --text-color: white;
+    --cmd-color: #1D1C29;
+    --cmd-hd-color: #343148;
+    --gray-color: #5D5B6D;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'VT323', monospace;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    word-break: break-all;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 5rem;
+    padding: 2rem 0rem;
+}
+
+.cli {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: min(90%, 800px);
+    margin: 0rem auto 5rem;
+    border-radius: 15px;
+    background-color: gray;
+    background-color: var(--cmd-color);
+    overflow: hidden;
+}
+
+.cli-hd {
+    height: 30px;
+    background-color: var(--cmd-hd-color);
+    display: flex;
+    align-items: center;
+    padding-left: .5rem;
+}
+
+.circle {
+    background-color: var(--gray-color);
+    width: 10px;
+    height: 10px;
+    border-radius: 15px;
+    margin-left: .5rem;
+}
+
+.cli-out {
+    flex: 1;
+    overflow-y: auto;
+    overflow-anchor: auto;
+}
+
+.cli-out:hover {
+    cursor: text;
+}
+
+.cli-out > * {
+    margin: .5rem 0rem;
+    padding: 1rem;
+}
+
+.cli-inp {
+    display: flex;
+    padding: 0rem 1rem;
+    font-size: 1.5rem;
+}
+
+.cli-inp span {
+    color: greenyellow;
+}
+
+.cli-inp .route {
+    padding-right: .5rem;
+}
+
+.cli-inp input {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-family: 'VT323', monospace;
+    font-size: 1.5rem;
+}
+
+input:focus {
+    outline: none;
+}
+
+.cmd-result {
+    font-size: 1.5rem;
+    padding: .5rem 2rem;
+}
+
+@media(max-width: 450px) {
+    main h1 {
+        font-size: 4rem;
+        padding: 1rem 0rem;
+    }
+}
